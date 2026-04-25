@@ -1,4 +1,4 @@
-// Counter module that increments up or down from 0 to 2^MAX.
+// Counter module that increments up or down from 0 to MAX.
 //
 // Parameters:
 //      MAX              Maximum count value.
@@ -10,7 +10,7 @@
 //                     - Hold current value next postive clock edge when low.
 //      up             - Increment count when high.
 //                     - Decrement count when low.
-//      count          - Outputs value from 0 to 2^MAX;
+//      count          - Outputs value from 0 to MAX;
 
 
 `timescale 1ns / 1ps
