@@ -1,3 +1,13 @@
+// Hour-Minute-Second counter module that increments and stores values using three distinct counters.
+//
+// Ports:
+//      clk            - Clock signal.
+//      enable         - Assign next value to flip-flop on positive clock edge when high.
+//                     - Hold current value next postive clock edge when low.
+//      hours          - Output for hours.
+//      minutes        - Output for minutes.
+//      seconds        - Output for seconds.
+
 `timescale 1ns / 1ps
 
 module hms_counter #(
