@@ -1,11 +1,11 @@
 # Digital Watch Project (ELEN20006)
 
-This repository provides the starter code, automated testing infrastructure, and development environment (via a VS Code dev container) for the Digital Watch Project.
+This repository provides the starter code, automated testing infrastructure including formal verification tools, and the development environment (via a VS Code dev container) for the Digital Watch Project.
 
 - Project documentation is in `docs/`.
-- **Currently only Part 1 is available.**
-- Version 1.0
-- Pre-release (13 April 2026)
+- **Currently only Assignment 1 is available.**
+- Version 1.1
+- Release Date: 27 April 2026
 
 ## Quick Start Checklist
 
@@ -56,8 +56,10 @@ The dev container includes:
 - `iverilog`
 - `verilator`
 - `pytest`
+- `yosys`
+- `sby`
 
-These tools support compilation, simulation and linting.
+These tools support compilation, simulation, linting, synthesis and formal verification.
 
 ## Included VS Code Extensions
 
@@ -71,6 +73,7 @@ These tools support compilation, simulation and linting.
 
 - `rtl/` --- SystemVerilog source files (place your assessed work here)
 - `tb/` --- manual testbenches for debugging your design
+- `sby/` --- formal verification tests
 - `tests/` --- automated pytest/cocotb tests
 - `templates/` --- starter templates for your project
 - `demos/` --- small example designs to familiarise yourself with the tools

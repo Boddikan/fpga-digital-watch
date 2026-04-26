@@ -1,0 +1,34 @@
+[options]
+mode prove
+depth 3
+
+[engines]
+smtbmc z3
+
+[tasks]
+max_4
+max_15
+max_60
+
+[script]
+read -sv -formal up_down_counter_rst.sv
+read -sv -formal up_down_counter_rst_assert.sv
+
+max_4:
+chparam -set MAX 4 up_down_counter_rst_assert
+chparam -set WIDTH 3 up_down_counter_rst_assert
+
+max_15:
+chparam -set MAX 15 up_down_counter_rst_assert
+chparam -set WIDTH 4 up_down_counter_rst_assert
+
+max_60:
+chparam -set MAX 60 up_down_counter_rst_assert
+chparam -set WIDTH 6 up_down_counter_rst_assert
+--
+
+prep -top up_down_counter_rst_assert
+
+[files]
+rtl/up_down_counter_rst.sv
+sby/up_down_counter_rst_assert.sv

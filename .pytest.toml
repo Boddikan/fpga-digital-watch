@@ -1,0 +1,4 @@
+[pytest]
+testpaths = ["tests"]
+addopts = ["-m not formal"]
+markers = ["formal: formal verification tests using sby"]

@@ -1,0 +1,31 @@
+[tasks]
+default
+large
+
+[options]
+mode prove
+depth 3
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv -formal mod_n_counter.sv
+read -sv -formal cascade_counter.sv
+read -sv -formal cascade_counter_assert.sv
+
+large:
+chparam -set N2 60 cascade_counter_assert
+chparam -set W2 6 cascade_counter_assert
+chparam -set N1 60 cascade_counter_assert
+chparam -set W1 6 cascade_counter_assert
+chparam -set N0 100 cascade_counter_assert
+chparam -set W0 7 cascade_counter_assert
+--
+
+prep -top cascade_counter_assert
+
+[files]
+rtl/cascade_counter.sv
+rtl/mod_n_counter.sv
+sby/cascade_counter_assert.sv

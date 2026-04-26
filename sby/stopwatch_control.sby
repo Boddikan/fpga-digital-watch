@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 3
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv -formal stopwatch_control.sv
+read -sv -formal stopwatch_control_assert.sv
+prep -top stopwatch_control_assert
+
+[files]
+rtl/stopwatch_control.sv
+sby/stopwatch_control_assert.sv

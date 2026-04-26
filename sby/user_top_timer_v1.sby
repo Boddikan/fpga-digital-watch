@@ -1,0 +1,39 @@
+[options]
+mode prove
+depth 3
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv -formal editable_countdown.sv
+read -sv -formal restartable_rate_generator.sv
+read -sv -formal rising_edge_detector.sv
+read -sv -formal edit_mode_selector.sv
+read -sv -formal pwm_generator.sv
+read -sv -formal button_auto_repeat.sv
+read -sv -formal button_hold_detect.sv
+read -sv -formal button_hold_pulse.sv
+read -sv -formal mod_n_counter.sv
+read -sv -formal arming_latch.sv
+read -sv -formal up_down_counter_rst.sv
+
+read -sv -formal user_top_timer_v1.sv
+read -sv -formal user_top_timer_v1_assert.sv
+
+prep -top user_top_timer_v1_assert
+
+[files]
+rtl/user_top_timer_v1.sv
+rtl/editable_countdown.sv
+rtl/restartable_rate_generator.sv
+rtl/rising_edge_detector.sv
+rtl/edit_mode_selector.sv
+rtl/pwm_generator.sv
+rtl/button_auto_repeat.sv
+rtl/button_hold_detect.sv
+rtl/button_hold_pulse.sv
+rtl/mod_n_counter.sv
+rtl/arming_latch.sv
+rtl/up_down_counter_rst.sv
+sby/user_top_timer_v1_assert.sv

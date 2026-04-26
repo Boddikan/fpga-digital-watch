@@ -1,5 +1,5 @@
 {
-    "name": "Verilog Dev Container",
+    "name": "Verilog (ELEN20006)",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -13,6 +13,7 @@
                 "charliermarsh.ruff"
             ],
             "settings": {
+                "python.defaultInterpreterPath": "/opt/venv/bin/python",
                 "[python]": {
                     "editor.formatOnSave": true,
                     "editor.defaultFormatter": "charliermarsh.ruff"
@@ -30,7 +31,8 @@
                 "verible.format.enabled": true,
                 "verible.lint.enabled": true,
                 "verible.arguments": [
-                    "--rules_config=.rules.verible_lint"
+                    "--rules_config=.rules.verible_lint",
+                    "--push_diagnostic_notifications"
                 ],
                 "systemverilog.includeIndexing": [
                     "**/*.{sv,v,svh,vh}"

@@ -1,0 +1,36 @@
+[options]
+mode prove
+depth 3
+
+[engines]
+smtbmc z3
+
+[tasks]
+max_4
+max_15
+max_59
+
+[script]
+read -sv -formal up_down_counter_rst.sv
+read -sv -formal editable_countdown.sv
+read -sv -formal editable_countdown_assert.sv
+
+max_4:
+chparam -set MAX 4 editable_countdown_assert
+chparam -set WIDTH 3 editable_countdown_assert
+
+max_15:
+chparam -set MAX 15 editable_countdown_assert
+chparam -set WIDTH 4 editable_countdown_assert
+
+max_59:
+chparam -set MAX 59 editable_countdown_assert
+chparam -set WIDTH 6 editable_countdown_assert
+--
+
+prep -top editable_countdown_assert
+
+[files]
+rtl/editable_countdown.sv
+rtl/up_down_counter_rst.sv
+sby/editable_countdown_assert.sv

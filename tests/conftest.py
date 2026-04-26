@@ -53,6 +53,14 @@ def resolve_rtl_path(filename):
         return RTL_ROOT / filename
 
 
+def resolve_sby_path(filename):
+    path = Path(filename)
+    if path.is_absolute():
+        return path
+    else:
+        return PROJECT_ROOT / "sby" / filename
+
+
 @pytest.fixture(scope="session")
 def sim_name(pytestconfig):
     return pytestconfig.getoption("--sim")
@@ -116,3 +124,13 @@ def rtl_exists(filename):
                   or absolute path for full control
     """
     return resolve_rtl_path(filename).exists()
+
+
+def sby_exists(filename):
+    """Check if a SymbiYosys spec file exists.
+
+    Args:
+        filename: Relative path (assumed in sby/), e.g., "mod_n_counter.sby"
+                  or absolute path for full control
+    """
+    return resolve_sby_path(filename).exists()

@@ -1,0 +1,37 @@
+[tasks]
+div_3
+div_7
+div_8
+
+[options]
+mode prove
+depth 11
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv -formal mod_n_counter.sv
+read -sv -formal cascade_counter.sv
+read -sv -formal restartable_rate_generator.sv
+read -sv -formal stopwatch_counter.sv
+read -sv -formal stopwatch_counter_assert.sv
+
+div_3:
+chparam -set CYCLES_PER_SECOND 300 stopwatch_counter_assert
+
+div_7:
+chparam -set CYCLES_PER_SECOND 700 stopwatch_counter_assert
+
+div_8:
+chparam -set CYCLES_PER_SECOND 800 stopwatch_counter_assert
+--
+
+prep -top stopwatch_counter_assert
+
+[files]
+rtl/stopwatch_counter.sv
+rtl/cascade_counter.sv
+rtl/mod_n_counter.sv
+rtl/restartable_rate_generator.sv
+sby/stopwatch_counter_assert.sv

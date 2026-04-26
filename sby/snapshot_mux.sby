@@ -1,0 +1,27 @@
+[tasks]
+width_1
+width_20
+
+[options]
+mode prove
+depth 3
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv -formal snapshot_mux.sv
+read -sv -formal snapshot_mux_assert.sv
+
+width_1:
+chparam -set WIDTH 1 snapshot_mux_assert
+
+width_20:
+chparam -set WIDTH 20 snapshot_mux_assert
+--
+
+prep -top snapshot_mux_assert
+
+[files]
+rtl/snapshot_mux.sv
+sby/snapshot_mux_assert.sv
