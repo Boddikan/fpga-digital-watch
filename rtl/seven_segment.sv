@@ -21,7 +21,7 @@ module seven_segment #(
 
   logic [6:0] segments_active_high;
 
-  assign segments = ACTIVE_LOW != 7'd0 ? ~segments_active_high : segments_active_high;
+  assign segments = ACTIVE_LOW != 0 ? ~segments_active_high : segments_active_high;
 
   always_comb
     if (blank == 1) begin
