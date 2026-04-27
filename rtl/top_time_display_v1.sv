@@ -1,3 +1,18 @@
+// Top level module to display time on FPGA for our stop watch and connects all modules currently in project. 
+//
+// Parameters:
+//     CYCLES_PER_SECOND - Parameter set to clock cycle on FPGA.
+//
+// Ports:
+//      CLOCK_50       - Clock input from FGPA.
+//      SW       [1:0] - Switch on FPGA that determines tick rate.
+//      HEX5     [6:0] - Segment display to FPGA for hours tens.
+//      HEX4     [6:0] - Segment display to FPGA for hours ones.
+//      HEX3     [6:0] - Segment display to FPGA for minutes tens.
+//      HEX2     [6:0] - Segment display to FPGA for minutes ones.
+//      HEX1     [6:0] - Segment display to FPGA for seconds tens.
+//      HEX0     [6:0] - Segment display to FPGA for minutes tens.
+
 `timescale 1ns / 1ps
 
 module top_time_display_v1 #(
