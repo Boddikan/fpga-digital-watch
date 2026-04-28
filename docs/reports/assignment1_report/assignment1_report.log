@@ -1,0 +1,302 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  27 APR 2026 18:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./assignment1_report.tex
+(assignment1_report.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks18
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen159
+\enit@toks=\toks19
+\enit@inbox=\box53
+\enit@count@id=\count286
+\enitdp@description=\count287
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count288
+\float@exts=\toks20
+\float@box=\box54
+\@float@everytoks=\toks21
+\@floatcapt=\box55
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip52
+\thanksmargin=\skip53
+\droptitle=\skip54
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count289
+) (assignment1_report.aux)
+\openout1 = `assignment1_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count290
+\scratchdimen=\dimen160
+\scratchbox=\box56
+\nofMPsegments=\count291
+\nofMParguments=\count292
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count293
+\MPscratchDim=\dimen161
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
+\everyMPtoPDFconversion=\toks23
+)
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\liamw\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
+
+ []
+
+<./images/q_report1.png, id=1, 530.48187pt x 63.73813pt>
+File: ./images/q_report1.png Graphic file (type png)
+<use ./images/q_report1.png>
+Package pdftex.def Info: ./images/q_report1.png  used on input line 27.
+(pdftex.def)             Requested size: 483.69687pt x 58.11751pt.
+<./images/q_report2.png, id=3, 525.965pt x 80.3pt>
+File: ./images/q_report2.png Graphic file (type png)
+<use ./images/q_report2.png>
+Package pdftex.def Info: ./images/q_report2.png  used on input line 36.
+(pdftex.def)             Requested size: 483.69687pt x 73.84991pt.
+<./images/seven_segment_waveform.png, id=4, 921.94438pt x 90.83937pt>
+File: ./images/seven_segment_waveform.png Graphic file (type png)
+<use ./images/seven_segment_waveform.png>
+Package pdftex.def Info: ./images/seven_segment_waveform.png  used on input lin
+e 44.
+(pdftex.def)             Requested size: 483.69043pt x 73.13039pt.
+<./images/up_down_counter_waveform.png, id=5, 920.43875pt x 112.92188pt>
+File: ./images/up_down_counter_waveform.png Graphic file (type png)
+<use ./images/up_down_counter_waveform.png>
+Package pdftex.def Info: ./images/up_down_counter_waveform.png  used on input l
+ine 59.
+(pdftex.def)             Requested size: 483.70107pt x 73.13126pt.
+[1
+
+{C:/Users/liamw/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/q_r
+eport1.png> <./images/q_report2.png> <./images/seven_segment_waveform.png>]
+<./images/binary_to_bcd_waveform.png, id=19, 923.45pt x 96.86188pt>
+File: ./images/binary_to_bcd_waveform.png Graphic file (type png)
+<use ./images/binary_to_bcd_waveform.png>
+Package pdftex.def Info: ./images/binary_to_bcd_waveform.png  used on input lin
+e 75.
+(pdftex.def)             Requested size: 483.69125pt x 73.1295pt.
+<./images/hms_counter_waveform.png, id=20, 919.93687pt x 132.495pt>
+File: ./images/hms_counter_waveform.png Graphic file (type png)
+<use ./images/hms_counter_waveform.png>
+Package pdftex.def Info: ./images/hms_counter_waveform.png  used on input line 
+91.
+(pdftex.def)             Requested size: 483.70403pt x 73.12921pt.
+<./images/mod_n_counter_waveform.png, id=21, 923.45pt x 111.41624pt>
+File: ./images/mod_n_counter_waveform.png Graphic file (type png)
+<use ./images/mod_n_counter_waveform.png>
+Package pdftex.def Info: ./images/mod_n_counter_waveform.png  used on input lin
+e 115.
+(pdftex.def)             Requested size: 483.69125pt x 73.12862pt.
+
+[2 <./images/up_down_counter_waveform.png> <./images/binary_to_bcd_waveform.png
+> <./images/hms_counter_waveform.png>]
+<./images/restartable_rate_generator_waveform.png, id=28, 918.93312pt x 88.8318
+8pt>
+File: ./images/restartable_rate_generator_waveform.png Graphic file (type png)
+<use ./images/restartable_rate_generator_waveform.png>
+Package pdftex.def Info: ./images/restartable_rate_generator_waveform.png  used
+ on input line 132.
+(pdftex.def)             Requested size: 483.70908pt x 73.12996pt.
+<./images/top_time_display_v1_waveform.png, id=29, 917.4275pt x 195.73125pt>
+File: ./images/top_time_display_v1_waveform.png Graphic file (type png)
+<use ./images/top_time_display_v1_waveform.png>
+Package pdftex.def Info: ./images/top_time_display_v1_waveform.png  used on inp
+ut line 147.
+(pdftex.def)             Requested size: 483.70049pt x 73.12724pt.
+<./images/q_report3.png, id=30, 528.97626pt x 63.73813pt>
+File: ./images/q_report3.png Graphic file (type png)
+<use ./images/q_report3.png>
+Package pdftex.def Info: ./images/q_report3.png  used on input line 161.
+(pdftex.def)             Requested size: 483.69687pt x 58.28284pt.
+ [3 <./images/mod_n_counter_waveform.png> <./images/restartable_rate_generator_
+waveform.png> <./images/top_time_display_v1_waveform.png>]
+<./images/q_report4.png, id=37, 532.99126pt x 63.23625pt>
+File: ./images/q_report4.png Graphic file (type png)
+<use ./images/q_report4.png>
+Package pdftex.def Info: ./images/q_report4.png  used on input line 170.
+(pdftex.def)             Requested size: 483.69687pt x 57.38971pt.
+<./images/q_report5.png, id=38, 530.48187pt x 63.23625pt>
+File: ./images/q_report5.png Graphic file (type png)
+<use ./images/q_report5.png>
+Package pdftex.def Info: ./images/q_report5.png  used on input line 179.
+(pdftex.def)             Requested size: 483.69687pt x 57.65988pt.
+<./images/restartable_rate_generator_r6_waveform.png, id=39, 918.43124pt x 92.3
+45pt>
+File: ./images/restartable_rate_generator_r6_waveform.png Graphic file (type pn
+g)
+<use ./images/restartable_rate_generator_r6_waveform.png>
+Package pdftex.def Info: ./images/restartable_rate_generator_r6_waveform.png  u
+sed on input line 189.
+(pdftex.def)             Requested size: 483.69714pt x 73.12787pt.
+ [4 <./images/q_report3.png> <./images/q_report4.png> <./images/q_report5.png> 
+<./images/restartable_rate_generator_r6_waveform.png>]
+(assignment1_report.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 2508 strings out of 467871
+ 44518 string characters out of 5418376
+ 454629 words of memory out of 5000000
+ 31398 multiletter control sequences out of 15000+600000
+ 632311 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,313b,246s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\liamw\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/liamw/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on assignment1_report.pdf (4 pages, 425278 bytes).
+PDF statistics:
+ 73 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+

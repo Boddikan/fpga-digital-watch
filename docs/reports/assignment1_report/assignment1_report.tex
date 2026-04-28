@@ -1,0 +1,201 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[]{enumitem}
+\usepackage{float}
+\usepackage[]{titling}
+
+\setlength{\droptitle}{-5em}
+
+\title{Assignment 1 Report}
+\author{Liam Watson}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Introduction}
+	This report details answers to key questions posed throughout the Digital Watch Part 1 Assignment and analyses all waveforms given by each module using a Testbench. We aim to highlight key findings and confirm all output behaves as expected after testing.\\
+	\\
+	\noindent Repository fpga-digital-watch forked and seven\_segment module completed locally. Changes committed and pushed as backup to GitHub. 
+	
+	\section{Report 1}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report1}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	Verilator only accepts \textbf{blank} otherwise the signal \textbf{blank} is not used in the instance seven\_segment.
+	
+	\section{Report 2}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report2}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	\subsection{Seven Segment Display}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{seven_segment_waveform}
+		\caption{Measured waveform for seven\_segment.sv}
+	\end{figure}
+	
+	The waveform for seven\_segment displays inputs \textbf{blank}, \textbf{digit}, and output \textbf{segments}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{blank} is low \textbf{segments} corresponds to the appropriate display output (e.g. when \textbf{digit} = 1, \textbf{segments} = 79 or 7'b1111001). 
+		\item When \textbf{blank} is high \textbf{segments} is set to 7F or 7'b1111111 which turns off all segments.
+	\end{itemize}
+	
+	\subsection{Parameterised Up-Down Counter with Enable}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{up_down_counter_waveform}
+		\caption{Measured waveform for up\_down\_counter.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{enable}, \textbf{up} and output \textbf{count}. \textbf{MAX} is set to 5 and \textbf{WIDTH} set to 3 in our Testbench. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{enable} is low \textbf{count} holds its current value at 0. 
+		\item When \textbf{enable} and \textbf{up} are high \textbf{count} increments and wraps after \textbf{count} = 5. 
+		\item  When \textbf{enable} is high and \textbf{up} is low \textbf{count} decrements and wraps after \textbf{count} = 0. 
+	\end{itemize}
+	
+	\subsection{Binary to Binary-Coded Decimal}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{binary_to_bcd_waveform}
+		\caption{Measured waveform for binary\_to\_bcd.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{bin}, and outputs \textbf{tens}, and \textbf{ones}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{bin} displays input digit.
+		\item \textbf{tens} corresponds with 10s column of \textbf{bin}.
+		\item \textbf{ones} corresponds with 1s column of \textbf{bin}.
+	\end{itemize}
+	
+	\subsection{Cascaded Hour-Minute-Second Counter with Enable}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{hms_counter_waveform}
+		\caption{Measured waveform for hms\_counter.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clock}, \textbf{enable} and outputs \textbf{hours}, \textbf{minutes} and \textbf{seconds}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{enable} is low all outputs hold current value.
+		\item When \textbf{enable} is high \textbf{seconds} increments every rising clock edge.
+		\item \textbf{minutes} increments after \textbf{seconds} reaches its max value.
+		\item \textbf{hours} increments after \textbf{minutes} reaches its max value.
+		\item each counter wraps after its max value is reached.
+	\end{itemize}
+	
+		\begin{itemize}[noitemsep]
+		\item \textbf{bin} displays input digit.
+		\item \textbf{tens} corresponds with 10s column of \textbf{bin}.
+		\item \textbf{ones} corresponds with 1s column of \textbf{bin}.
+	\end{itemize}
+	
+	\subsection{Modulo N Counter}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{mod_n_counter_waveform}
+		\caption{Measured waveform for mod\_n\_counter.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{rst}, and \textbf{enable} and output \textbf{count}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{enable} is low all outputs hold current value.
+		\item When \textbf{rst} is high \textbf{count} is reset to 0 and has priority over \textbf{enable}.
+		\item When \textbf{enable} is high and \textbf{rst} is low \textbf{count} increments every rising clock edge.
+		\item \textbf{count} wraps after \textbf{N - 1} is reached.
+	\end{itemize}
+	
+	\subsection{Restartable Rate Generator}
+	
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{restartable_rate_generator_waveform}
+		\caption{Measured waveform for restartable\_rate\_generator.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, and \textbf{run}, and output \textbf{tick}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{run} is low \textbf{tick} is low.
+		\item When \textbf{run} is high for \textbf{CYCLE\_COUNT - 1} rising edges \textbf{tick} outputs a one cycle pulse.
+	\end{itemize}
+	
+		\subsection{Top Time Display V1}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{top_time_display_v1_waveform}
+		\caption{Measured waveform for top\_time\_display\_v1.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, and \textbf{SW}, and outputs \textbf{HEX0}, \textbf{HEX1}, \textbf{HEX2}, \textbf{HEX3}, \textbf{HEX4}, and \textbf{HEX5}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{SW} is 00 counter holds 00:00:00.
+		\item When \textbf{SW} is high second counter increments every cycle and minutes increments to 1 when seconds rolls over from 59 to 0.
+	\end{itemize}
+	
+	\section{Report 3}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report3}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	 Repository fpga-digital-watch forked and modules completed locally. Changes are then committed and pushed to GitHub after a working session, or after a module has been implemented and tested.
+	 
+	 \section{Report 4}
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth]{q_report4}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
+	 
+	 Binary-coded decimal (BCD) encodes a decimal number into a single binary digit for each place value.
+	 
+	 \section{Report 5}
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth]{q_report5}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
+	 
+	 This allows us to set the minimum address width for CounterWidth according to the size of CYCLE\_COUNT without the need to state the bit width explicitly. \$2clog(CYCLE\_COUNT) will calculate the smallest power of 2 that will cover memory required for CYCLE\_COUNT.
+	 
+	 \section{Report 6}
+	 
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth, height=0.1\textheight]{restartable_rate_generator_r6_waveform}
+	 	\caption{Measured waveform for restartable\_rate\_generator.sv for case \textbf{CYCLE\_COUNT = 1}}
+	 \end{figure}
+	 
+	 The waveform displays inputs \textbf{clk}, and \textbf{run}, and output \textbf{tick}. We observe that:
+	 
+	 \begin{itemize}[noitemsep]
+	 	\item When \textbf{run} is low \textbf{tick} is low.
+	 	\item \textbf{tick} follows \textbf{run} when high one cycle later. This one cycle delay is expected when implementing a Moore FSM.
+	 \end{itemize}
+	 
+		
+\end{document}

@@ -1,4 +1,4 @@
-// Top level module to display time on FPGA for our stop watch and connects all modules currently in project. 
+// Top level module to display time on FPGA for our stop watch and connects all modules currently in project.
 //
 // Parameters:
 //     CYCLES_PER_SECOND - Parameter set to clock cycle on FPGA.
