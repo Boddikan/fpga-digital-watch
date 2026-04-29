@@ -14,8 +14,7 @@ module rising_edge_detector (
     output logic rise
 );
 
-  logic state;
-  initial state = 1'd0;
+  logic state = 1'd0;
 
   always_ff @(posedge clk) begin
     state <= sig_in;

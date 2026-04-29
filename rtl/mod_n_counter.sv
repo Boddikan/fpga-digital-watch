@@ -17,13 +17,11 @@ module mod_n_counter #(
     input logic clk,
     input logic rst,
     input logic enable,
-    output logic [WIDTH-1:0] count
+    output logic [WIDTH-1:0] count = 0
 );
   localparam logic [WIDTH-1:0] MaxCount = WIDTH'(N - 1);
 
   logic [WIDTH-1:0] next_count;
-
-  initial count = '0;
 
   always_ff @(posedge clk) begin
     if (rst) count <= '0;

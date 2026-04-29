@@ -22,15 +22,12 @@ module up_down_counter #(
     input logic clk,
     input logic enable,
     input logic up,
-    output logic [WIDTH-1:0] count
+    output logic [WIDTH-1:0] count = WIDTH'(0)
 );
 
   localparam logic [WIDTH-1:0] Max = WIDTH'(MAX);
 
   logic [WIDTH-1:0] next_count;
-
-  initial count = WIDTH'(0);
-
 
   always_ff @(posedge clk) if (enable) count <= next_count;
 
