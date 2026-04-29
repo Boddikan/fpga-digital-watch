@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  29 APR 2026 18:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  29 APR 2026 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -281,71 +281,77 @@ File: ./images/button_auto_repeat_waveform.png Graphic file (type png)
 Package pdftex.def Info: ./images/button_auto_repeat_waveform.png  used on inpu
 t line 220.
 (pdftex.def)             Requested size: 483.70908pt x 73.13301pt.
-<./images/q_report3.png, id=48, 528.97626pt x 63.73813pt>
+<./images/arming_latch_waveform.png, id=48, 920.43875pt x 105.89563pt>
+File: ./images/arming_latch_waveform.png Graphic file (type png)
+<use ./images/arming_latch_waveform.png>
+Package pdftex.def Info: ./images/arming_latch_waveform.png  used on input line
+ 235.
+(pdftex.def)             Requested size: 483.70107pt x 73.13106pt.
+<./images/q_report3.png, id=49, 528.97626pt x 63.73813pt>
 File: ./images/q_report3.png Graphic file (type png)
 <use ./images/q_report3.png>
-Package pdftex.def Info: ./images/q_report3.png  used on input line 234.
+Package pdftex.def Info: ./images/q_report3.png  used on input line 249.
 (pdftex.def)             Requested size: 483.69687pt x 58.28284pt.
-<./images/q_report4.png, id=49, 532.99126pt x 63.23625pt>
+<./images/q_report4.png, id=50, 532.99126pt x 63.23625pt>
 File: ./images/q_report4.png Graphic file (type png)
 <use ./images/q_report4.png>
-Package pdftex.def Info: ./images/q_report4.png  used on input line 243.
+Package pdftex.def Info: ./images/q_report4.png  used on input line 258.
 (pdftex.def)             Requested size: 483.69687pt x 57.38971pt.
-<./images/q_report5.png, id=50, 530.48187pt x 63.23625pt>
+ [5 <./images/button_auto_repeat_waveform.png> <./images/arming_latch_waveform.
+png> <./images/q_report3.png> <./images/q_report4.png>]
+<./images/q_report5.png, id=58, 530.48187pt x 63.23625pt>
 File: ./images/q_report5.png Graphic file (type png)
 <use ./images/q_report5.png>
-Package pdftex.def Info: ./images/q_report5.png  used on input line 252.
+Package pdftex.def Info: ./images/q_report5.png  used on input line 267.
 (pdftex.def)             Requested size: 483.69687pt x 57.65988pt.
- [5 <./images/button_auto_repeat_waveform.png> <./images/q_report3.png> <./imag
-es/q_report4.png> <./images/q_report5.png>]
-<./images/restartable_rate_generator_r6_waveform.png, id=58, 918.43124pt x 92.3
+<./images/restartable_rate_generator_r6_waveform.png, id=59, 918.43124pt x 92.3
 45pt>
 File: ./images/restartable_rate_generator_r6_waveform.png Graphic file (type pn
 g)
 <use ./images/restartable_rate_generator_r6_waveform.png>
 Package pdftex.def Info: ./images/restartable_rate_generator_r6_waveform.png  u
-sed on input line 262.
+sed on input line 277.
 (pdftex.def)             Requested size: 483.69714pt x 73.12787pt.
-<./images/q_report7.png, id=59, 527.47063pt x 61.73062pt>
+<./images/q_report7.png, id=60, 527.47063pt x 61.73062pt>
 File: ./images/q_report7.png Graphic file (type png)
 <use ./images/q_report7.png>
-Package pdftex.def Info: ./images/q_report7.png  used on input line 277.
+Package pdftex.def Info: ./images/q_report7.png  used on input line 292.
 (pdftex.def)             Requested size: 483.6933pt x 73.13254pt.
-<./images/q_report8.png, id=60, 525.965pt x 78.2925pt>
+<./images/q_report8.png, id=61, 525.965pt x 78.2925pt>
 File: ./images/q_report8.png Graphic file (type png)
 <use ./images/q_report8.png>
-Package pdftex.def Info: ./images/q_report8.png  used on input line 287.
+Package pdftex.def Info: ./images/q_report8.png  used on input line 302.
 (pdftex.def)             Requested size: 483.7171pt x 73.13022pt.
-<./images/q_report9.png, id=61, 524.45938pt x 73.77562pt>
+ [6 <./images/q_report5.png> <./images/restartable_rate_generator_r6_waveform.p
+ng> <./images/q_report7.png>]
+<./images/q_report9.png, id=68, 524.45938pt x 73.77562pt>
 File: ./images/q_report9.png Graphic file (type png)
 <use ./images/q_report9.png>
-Package pdftex.def Info: ./images/q_report9.png  used on input line 297.
+Package pdftex.def Info: ./images/q_report9.png  used on input line 312.
 (pdftex.def)             Requested size: 483.70888pt x 73.12924pt.
-
-[6 <./images/restartable_rate_generator_r6_waveform.png> <./images/q_report7.pn
-g> <./images/q_report8.png>]
-<./images/q_report10.png, id=68, 527.47063pt x 77.28876pt>
+<./images/q_report10.png, id=69, 527.47063pt x 77.28876pt>
 File: ./images/q_report10.png Graphic file (type png)
 <use ./images/q_report10.png>
-Package pdftex.def Info: ./images/q_report10.png  used on input line 307.
+Package pdftex.def Info: ./images/q_report10.png  used on input line 322.
 (pdftex.def)             Requested size: 483.6933pt x 73.13377pt.
-<./images/q_report11.png, id=69, 525.965pt x 75.78313pt>
+<./images/q_report11.png, id=70, 525.965pt x 75.78313pt>
 File: ./images/q_report11.png Graphic file (type png)
 <use ./images/q_report11.png>
-Package pdftex.def Info: ./images/q_report11.png  used on input line 317.
+Package pdftex.def Info: ./images/q_report11.png  used on input line 332.
 (pdftex.def)             Requested size: 483.7171pt x 73.12909pt.
- [7 <./images/q_report9.png> <./images/q_report10.png> <./images/q_report11.png
->] (assignment1_report.aux)
+ [7 <./images/q_report8.png> <./images/q_report9.png> <./images/q_report10.png>
+ <./images/q_report11.png>]
+(assignment1_report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2628 strings out of 467871
- 48620 string characters out of 5418376
+ 2640 strings out of 467871
+ 49059 string characters out of 5418376
  454629 words of memory out of 5000000
- 31518 multiletter control sequences out of 15000+600000
+ 31530 multiletter control sequences out of 15000+600000
  632311 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,313b,246s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -356,9 +362,9 @@ ic/amsfonts/cm/cmbx12.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/liamw/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on assignment1_report.pdf (7 pages, 608227 bytes).
+Output written on assignment1_report.pdf (7 pages, 629239 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

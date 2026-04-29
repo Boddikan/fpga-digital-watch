@@ -213,7 +213,7 @@
 		\item \textbf{pulse} goes high for a single clock cycle after \textbf{button} is pressed for appropriate \textbf{HOLD\_CYCLES} within \textbf{button\_hold\_detect} module.
 	\end{itemize}
 	
-		\subsection{Button Auto Repeat}
+	\subsection{Button Auto Repeat}
 	
 	\begin{figure}[H]
 		\centering
@@ -226,6 +226,21 @@
 	\begin{itemize}[noitemsep]
 		\item \textbf{pulse} goes high for a single clock cycle after \textbf{button} is pressed.
 		\item \textbf{pulse} train after \textbf{button} has been held for \textbf{HOLD\_CYCLES - REPEAT\_CYCLES + 1}.
+	\end{itemize}
+	
+	\subsection{Arming Latch}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{arming_latch_waveform}
+		\caption{Measured waveform for arming\_latch.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{arm}, and \textbf{disarm} and output \textbf{armed}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{armed} goes low next rising edge if \textbf{disarm} is high.
+		\item \textbf{armed} goes high if \textbf{arm} is high and \textbf{disarm} is low.
 	\end{itemize}
 	
 	\section{Report 3}

@@ -1,4 +1,4 @@
-// Button Hold Detect module wish that detects a button
+// Button Hold Detect module which that detects a button
 // has been held after a set amount of time.
 //
 // Ports:
