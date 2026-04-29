@@ -192,11 +192,40 @@
 		\caption{Measured waveform for button\_hold\_detect.sv}
 	\end{figure}
 	
-	The waveform displays inputs \textbf{clk} and button \textbf{button} and output \textbf{held}. We observe that:
+	The waveform displays inputs \textbf{clk} and \textbf{button} and output \textbf{held}. We observe that:
 	
 	\begin{itemize}[noitemsep]
 		\item \textbf{held} goes high after \textbf{button} is pressed for \textbf{HOLD\_CYCLES} only.
 		\item \textbf{held} goes low after button has been released.
+	\end{itemize}
+	
+	\subsection{Button Hold Pulse}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{button_hold_pulse_waveform}
+		\caption{Measured waveform for button\_hold\_pulse.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk} and \textbf{button} and output \textbf{pulse}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{pulse} goes high for a single clock cycle after \textbf{button} is pressed for appropriate \textbf{HOLD\_CYCLES} within \textbf{button\_hold\_detect} module.
+	\end{itemize}
+	
+		\subsection{Button Auto Repeat}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{button_auto_repeat_waveform}
+		\caption{Measured waveform for button\_auto\_repeat.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk} and \textbf{button} and output \textbf{pulse}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{pulse} goes high for a single clock cycle after \textbf{button} is pressed.
+		\item \textbf{pulse} train after \textbf{button} has been held for \textbf{HOLD\_CYCLES - REPEAT\_CYCLES + 1}.
 	\end{itemize}
 	
 	\section{Report 3}
@@ -270,5 +299,25 @@
 	 \end{figure}
 	 
 	 Our state has two variables \textbf{held} and \textbf{count} and there is no direct path to our output from our input. \textbf{held} is a registered output and therefore a part of our current state.
+	 
+	 \section{Report 10}
+	 
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth, height=0.1\textheight]{q_report10}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
+	 
+	Our \textbf{button\_hold\_pulse} module outputs a one clock cycle pulse once the button runs for the specified \textbf{HOLD\_CYCLES} within \textbf{button\_hold\_detect} module which has been instantiated in this module.
+	
+	\section{Report 11}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{q_report11}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	The module \textbf{button\_hold\_pulse} is a Moore FSM as the input \textbf{held} is sent from \textbf{button\_hold\_detect} which is a Moore FSM. Meaning, the input to \textbf{button\_hold\_pulse} can only occur on a rising clock edge.
 		
 \end{document}
