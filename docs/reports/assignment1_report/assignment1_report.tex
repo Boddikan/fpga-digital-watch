@@ -140,7 +140,7 @@
 		\item When \textbf{run} is high for \textbf{CYCLE\_COUNT - 1} rising edges \textbf{tick} outputs a one cycle pulse.
 	\end{itemize}
 	
-		\subsection{Top Time Display V1}
+	\subsection{Top Time Display V1}
 	
 	\begin{figure}[H]
 		\centering
@@ -153,6 +153,50 @@
 	\begin{itemize}[noitemsep]
 		\item When \textbf{SW} is 00 counter holds 00:00:00.
 		\item When \textbf{SW} is high second counter increments every cycle and minutes increments to 1 when seconds rolls over from 59 to 0.
+	\end{itemize}
+	
+	\subsection{Pulse Width Generator}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{pwm_generator_waveform}
+		\caption{Measured waveform for pwm\_generator.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, and \textbf{rst}, and output \textbf{pwm\_out}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{pwm\_out} has period of \textbf{PERIOD\_CYCLES} and is high for first [DUTY\_CYLES].
+		\item When \textbf{rst} is high \textbf{pwm\_out} stays high next clock edge.
+	\end{itemize}
+	
+	\subsection{Rising Edge Detector}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{rising_edge_detector_waveform}
+		\caption{Measured waveform for rising\_edge\_detector.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, and outputs \textbf{sig\_in} and \textbf{rise}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{sig\_in} is high \textbf{rise} is high for remainder of clock cycle.
+	\end{itemize}
+	
+	\subsection{Button Hold Detect}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{button_hold_detect_waveform}
+		\caption{Measured waveform for button\_hold\_detect.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk} and button \textbf{button} and output \textbf{held}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{held} goes high after \textbf{button} is pressed for \textbf{HOLD\_CYCLES} only.
+		\item \textbf{held} goes low after button has been released.
 	\end{itemize}
 	
 	\section{Report 3}
@@ -197,5 +241,34 @@
 	 	\item \textbf{tick} follows \textbf{run} when high one cycle later. This one cycle delay is expected when implementing a Moore FSM.
 	 \end{itemize}
 	 
+	 \section{Report 7}
+	 
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth, height=0.1\textheight]{q_report7}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
+	 
+	 The module is called PWM generator as it generates a pulse wave and allows as to vary the pulse width with \textbf{DUTY\_CYLES}.
+	 
+	 \section{Report 8}
+	 
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth, height=0.1\textheight]{q_report8}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
+	 
+	 In our \textbf{mod\_n\_counter} module \textbf{rst} takes priority in the sequential logic within the flip-flop block so that the \textbf{count} is reset at the next rising clock edge. This ensures count is reset whilst keeping our circuit synchronous.
+	 
+	 \section{Report 9}
+	 
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth, height=0.1\textheight]{q_report9}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
+	 
+	 Our state has two variables \textbf{held} and \textbf{count} and there is no direct path to our output from our input. \textbf{held} is a registered output and therefore a part of our current state.
 		
 \end{document}
