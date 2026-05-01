@@ -1,8 +1,8 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 module wave_user_top_watch_v2;
-  reg        clk    = 0;
+  reg        clk = 0;
   reg  [3:0] button = 4'b0;
-  reg  [9:0] sw     = 10'b0;
+  reg  [9:0] sw = 10'b0;
   wire [9:0] led;
   wire [6:0] hours_disp;
   wire [6:0] minutes_disp;
@@ -19,13 +19,13 @@ module wave_user_top_watch_v2;
   user_top_watch_v2 #(
       .CYCLES_PER_SECOND(50)
   ) dut (
-      .clk         (clk),
-      .button      (button),
-      .sw          (sw),
-      .led         (led),
-      .hours_disp  (hours_disp),
-      .minutes_disp(minutes_disp),
-      .seconds_disp(seconds_disp),
+      .clk          (clk),
+      .button       (button),
+      .sw           (sw),
+      .led          (led),
+      .hours_disp   (hours_disp),
+      .minutes_disp (minutes_disp),
+      .seconds_disp (seconds_disp),
       .blank_hours  (blank_hours),
       .blank_minutes(blank_minutes),
       .blank_seconds(blank_seconds)
@@ -50,7 +50,7 @@ module wave_user_top_watch_v2;
     #550;  // 55 cycles held high
 
     button[3] = 0;
-    #200;  // 20 cycles released; observe seconds flashing (4+ PWM cycles visible)
+    #1000;  // 100 cycles released; observe seconds flashing (4 PWM cycles visible)
 
     // --- Short press 1: advance seconds -> minutes ---
     // Rising edge detected while armed; mod-3 counter advances to 1.
@@ -58,14 +58,14 @@ module wave_user_top_watch_v2;
     button[3] = 1;
     #100;  // 10 cycles
     button[3] = 0;
-    #200;  // 20 cycles released; observe minutes flashing
+    #1000;  // 100 cycles released; observe minutes flashing (4 PWM cycles visible)
 
     // --- Short press 2: advance minutes -> hours ---
     // Counter advances to 2; mode_enable becomes 3'b100.
     button[3] = 1;
     #100;
     button[3] = 0;
-    #200;  // observe hours flashing
+    #1000;  // 100 cycles released; observe hours flashing (4 PWM cycles visible)
 
     // --- Short press 3: exit edit mode ---
     // disarm condition fires (count==2 && enable_counter); latch clears.
