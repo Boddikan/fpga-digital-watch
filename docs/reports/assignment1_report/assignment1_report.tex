@@ -243,6 +243,39 @@
 		\item \textbf{armed} goes high if \textbf{arm} is high and \textbf{disarm} is low.
 	\end{itemize}
 	
+	\subsection{Edit Mode Select}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{edit_mode_select_waveform}
+		\caption{Measured waveform for edit\_mode\_select.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{buton}, and output \textbf{mode\_enable}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{mode\_enable} increments if \textbf{button} is held high for \textbf{long\_press}.
+		\item \textbf{mode\_enable} then increments to next mode after \textbf{press}
+		\item Once \textbf{mode\_enable} passes last mode must hold for \textbf{long\_press} again to enter mode select.
+	\end{itemize}
+	
+	\subsection{Editable Counter}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{editable_counter_waveform}
+		\caption{Measured waveform for editable\_counter.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{tick}, \textbf{edit\_mode}, \textbf{inc}, \textbf{dec} and output \textbf{count}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When \textbf{edit\_mode} is low \textbf{count} increments every tick.
+		\item When \textbf{edit\_mode} is and \textbf{inc} high \textbf{count} increments.
+		\item When \textbf{edit\_mode} is high and \textbf{dec} is high \textbf{count} decrements.
+		\item When both \textbf{inc} and \textbf{inc} are high when \textbf{edit\_mode} is high\textbf{count} holds value.
+	\end{itemize}
+	
 	\section{Report 3}
 	\begin{figure}[H]
 		\centering
@@ -334,5 +367,15 @@
 	\end{figure}
 	
 	The module \textbf{button\_hold\_pulse} is a Moore FSM as the input \textbf{held} is sent from \textbf{button\_hold\_detect} which is a Moore FSM. Meaning, the input to \textbf{button\_hold\_pulse} can only occur on a rising clock edge.
+	
+	\section{Report 12}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{q_report12}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	We can use wire we are using combinational signals driven by continuous assignments and do not need to store a value.
 		
 \end{document}
