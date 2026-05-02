@@ -276,6 +276,35 @@
 		\item When both \textbf{inc} and \textbf{inc} are high when \textbf{edit\_mode} is high\textbf{count} holds value.
 	\end{itemize}
 	
+	\subsection{Key Synchroniser}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{key_synchroniser_waveform}
+		\caption{Measured waveform for key\_synchroniser.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{key\_n}, and output \textbf{key\_sync}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{key\_sync} displays a one cycle delayed inverted output of \textbf{key\_n}.
+	\end{itemize}
+	
+	\subsection{Decimal Display Driver}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.2\textheight]{decimal_display_driver_waveform}
+		\caption{Measured waveform for decimal\_display\_driver.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{blank[n]}, \textbf{value[n]}, and outputs \textbf{HEX0 - HEX5}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{value} is converted to the corresponding tens and ones values and displayed on our \textbf{HEX} outputs.
+		\item  When \textbf{blank} is asserted the corresponding \textbf{HEX} displays are turned off indicated by the output \textbf{111\_1111}.
+	\end{itemize}
+	
 	\section{Report 3}
 	\begin{figure}[H]
 		\centering
