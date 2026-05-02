@@ -135,9 +135,7 @@ async def test_top_time_display_v1(dut):
         if hex_snapshot(dut) != snap:
             break
     else:
-        assert False, (
-            f"1 kHz: seconds did not advance within {PERIOD + PERIOD // 5} cycles"
-        )
+        assert False, f"1 kHz: seconds did not advance within {PERIOD + PERIOD // 5} cycles"
     # First tick consumed; now measure the next full period exactly.
     snap = hex_snapshot(dut)
     cycles = 0
@@ -147,9 +145,5 @@ async def test_top_time_display_v1(dut):
         if hex_snapshot(dut) != snap:
             break
     else:
-        assert False, (
-            f"1 kHz: seconds did not advance again within {PERIOD + PERIOD // 10} cycles"
-        )
-    assert cycles == PERIOD, (
-        f"1 kHz tick period: expected {PERIOD} cycles, got {cycles}"
-    )
+        assert False, f"1 kHz: seconds did not advance again within {PERIOD + PERIOD // 10} cycles"
+    assert cycles == PERIOD, f"1 kHz tick period: expected {PERIOD} cycles, got {cycles}"

@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     verilator \
     perl-doc \
     yosys \
+    graphviz \
     z3 \
     locales \
     ca-certificates \

@@ -72,7 +72,8 @@ async def test_divider_reset_on_exit_seconds_edit(dut):
     await tick_n(dut, CPS // 2)
     seconds_before_exit = int(dut.seconds_disp.value)
     cocotb.log.info(
-        f"seconds_disp before exit: {seconds_before_exit}  (divider count ~ {CPS // 2})"
+        f"seconds_disp before exit: {seconds_before_exit}  "
+        f"(divider count ~ {CPS // 2})"
     )
 
     # Exit seconds edit -> minutes edit (short press).
@@ -119,9 +120,7 @@ async def test_divider_reset_on_exit_seconds_edit(dut):
     # from 0 and no tick would arrive within CPS//2 cycles.
     seconds_before_minutes_exit = int(dut.seconds_disp.value)
     await press_mode(dut, 2)
-    cocotb.log.info(
-        "Exited minutes edit (entered hours edit); no spurious reset expected"
-    )
+    cocotb.log.info("Exited minutes edit (entered hours edit); no spurious reset expected")
 
     await tick_n(dut, CPS // 2)
     expected_after_no_reset = (seconds_before_minutes_exit + 1) % 60

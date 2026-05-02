@@ -1,8 +1,8 @@
-`timescale 1ns / 1ps
+`timescale 1ns/1ps
 module wave_user_top_watch_v2;
-  reg        clk = 0;
+  reg        clk    = 0;
   reg  [3:0] button = 4'b0;
-  reg  [9:0] sw = 10'b0;
+  reg  [9:0] sw     = 10'b0;
   wire [9:0] led;
   wire [6:0] hours_disp;
   wire [6:0] minutes_disp;
@@ -19,13 +19,13 @@ module wave_user_top_watch_v2;
   user_top_watch_v2 #(
       .CYCLES_PER_SECOND(50)
   ) dut (
-      .clk          (clk),
-      .button       (button),
-      .sw           (sw),
-      .led          (led),
-      .hours_disp   (hours_disp),
-      .minutes_disp (minutes_disp),
-      .seconds_disp (seconds_disp),
+      .clk         (clk),
+      .button      (button),
+      .sw          (sw),
+      .led         (led),
+      .hours_disp  (hours_disp),
+      .minutes_disp(minutes_disp),
+      .seconds_disp(seconds_disp),
       .blank_hours  (blank_hours),
       .blank_minutes(blank_minutes),
       .blank_seconds(blank_seconds)

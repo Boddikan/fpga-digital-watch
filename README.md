@@ -3,9 +3,10 @@
 This repository provides the starter code, automated testing infrastructure including formal verification tools, and the development environment (via a VS Code dev container) for the Digital Watch Project.
 
 - Project documentation is in `docs/`.
-- **Currently only Assignment 1 is available.**
-- Version 1.2
-- Release Date: 1 May 2026
+  - Assignment #1 Version 1.3
+  - Assignment #2 Version 1.0
+- Project Version 1.3
+- Release Date: 2 May 2026
 
 ## Quick Start Checklist
 
