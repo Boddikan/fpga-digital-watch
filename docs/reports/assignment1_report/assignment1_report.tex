@@ -305,6 +305,22 @@
 		\item  When \textbf{blank} is asserted the corresponding \textbf{HEX} displays are turned off indicated by the output \textbf{111\_1111}.
 	\end{itemize}
 	
+	\subsection{User Top Watch}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{user_top_watch_v1_waveform}
+		\caption{Measured waveform for decimal\_display\_driver.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, and outputs \textbf{seconds\_disp}, \textbf{minutes\_disp}, and \textbf{hours\_disp}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{seconds\_disp} increments every \textbf{seconds\_tick}.
+		\item \textbf{minutes\_disp} increments when \textbf{seconds\_disp} wraps and \textbf{seconds\_tick} asserts.
+		\item \textbf{hours\_disp} does not display increment however it does increment when \textbf{minutes\_disp} and \textbf{seconds\_disp} wraps and \textbf{seconds\_tick} asserts.
+	\end{itemize}
+	
 	\section{Report 3}
 	\begin{figure}[H]
 		\centering
