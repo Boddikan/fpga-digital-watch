@@ -305,7 +305,7 @@
 		\item  When \textbf{blank} is asserted the corresponding \textbf{HEX} displays are turned off indicated by the output \textbf{111\_1111}.
 	\end{itemize}
 	
-	\subsection{User Top Watch}
+	\subsection{User Top Watch V1}
 	
 	\begin{figure}[H]
 		\centering
@@ -418,6 +418,28 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth, height=0.1\textheight]{q_report12}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.2\textheight]{q_report12_block_diagram}
+		\caption{Block diagram created using draw.io}
+	\end{figure}
+	
+	The following combinational logic was used to drive our \textbf{mod\_n\_counter}:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{enable\_counter} is assigned \textbf{press \&\& armed} which ensures our \textbf{arming\_latch} has been armed before registering a button press to enable our counter.
+		\item \textbf{reset\_counter} is simply assigned to \textbf{disarm}.
+		\item \textbf{disarm} is assigned \textbf{press \&\& armed \&\& (count == 2)} to disarm our latch and reset our counter on the press that steps past the last mode. This ensures the circuit registers a new long press before re-entering edit mode.
+	\end{itemize}
+	
+	\section{Report 13}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{q_report13}
 		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
 	\end{figure}
 	

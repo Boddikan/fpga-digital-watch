@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  3 MAY 2026 08:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  3 MAY 2026 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,13 +374,26 @@ File: ./images/q_report11.png Graphic file (type png)
 <use ./images/q_report11.png>
 Package pdftex.def Info: ./images/q_report11.png  used on input line 410.
 (pdftex.def)             Requested size: 483.7171pt x 73.12909pt.
-<./images/q_report12.png, id=90, 542.52687pt x 62.2325pt>
+<./images/q_report12.png, id=90, 533.49312pt x 81.30376pt>
 File: ./images/q_report12.png Graphic file (type png)
 <use ./images/q_report12.png>
 Package pdftex.def Info: ./images/q_report12.png  used on input line 420.
-(pdftex.def)             Requested size: 483.7166pt x 73.13458pt.
+(pdftex.def)             Requested size: 483.71303pt x 73.13298pt.
+<./images/q_report12_block_diagram.png, id=91, 1035.87pt x 321.2pt>
+File: ./images/q_report12_block_diagram.png Graphic file (type png)
+<use ./images/q_report12_block_diagram.png>
+Package pdftex.def Info: ./images/q_report12_block_diagram.png  used on input l
+ine 426.
+(pdftex.def)             Requested size: 483.69775pt x 146.24915pt.
  [9 <./images/q_report10.png> <./images/q_report11.png> <./images/q_report12.pn
 g>]
+<./images/q_report13.png, id=98, 542.52687pt x 62.2325pt>
+File: ./images/q_report13.png Graphic file (type png)
+<use ./images/q_report13.png>
+Package pdftex.def Info: ./images/q_report13.png  used on input line 442.
+(pdftex.def)             Requested size: 483.7166pt x 73.13458pt.
+
+[10 <./images/q_report12_block_diagram.png> <./images/q_report13.png>]
 (assignment1_report.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -388,10 +401,10 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2712 strings out of 467871
- 51885 string characters out of 5418376
- 454626 words of memory out of 5000000
- 31602 multiletter control sequences out of 15000+600000
+ 2736 strings out of 467871
+ 52667 string characters out of 5418376
+ 454628 words of memory out of 5000000
+ 31626 multiletter control sequences out of 15000+600000
  632311 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,313b,246s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -402,9 +415,9 @@ ic/amsfonts/cm/cmbx12.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/liamw/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on assignment1_report.pdf (9 pages, 888888 bytes).
+Output written on assignment1_report.pdf (10 pages, 927387 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
