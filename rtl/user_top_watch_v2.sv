@@ -1,7 +1,5 @@
-// User Top Watch V1 wrapper to test that hours_disp, minutes_disp,
-// and second_disp increment appropropriately.
+// User Top Watch V2 wrapper to test that SSEG display blink when entering edit_mode.
 //
-// Main objective is to verify each display rolls over once max is reached.
 //
 // Parameters:
 //      CYCLES_PER_SECOND      - Clock speed in Hz.
@@ -20,7 +18,7 @@
 
 `timescale 1ns / 1ps
 
-module user_top_watch_v1 #(
+module user_top_watch_v2 #(
     /* verilator lint_off UNUSEDPARAM */
     parameter int CYCLES_PER_SECOND = 50_000_000
     /* verilator lint_on UNUSEDPARAM */
@@ -109,9 +107,9 @@ module user_top_watch_v1 #(
       .tick(seconds_tick)
   );
 
-  assign seconds_edit = 1'b0;
-  assign minutes_edit = 1'b0;
-  assign hours_edit = 1'b0;
+  assign seconds_edit = (mode_enable[0] || mode_enable[1] || mode_enable[2]);
+  assign minutes_edit = (mode_enable[0] || mode_enable[1] || mode_enable[2]);
+  assign hours_edit = (mode_enable[0] || mode_enable[1] || mode_enable[2]);
 
   assign seconds_inc = 1'b0;
   assign minutes_inc = 1'b0;
@@ -131,8 +129,33 @@ module user_top_watch_v1 #(
 
   // Unused
   assign led = 10'b0;
-  assign blank_hours = 1'b0;
-  assign blank_minutes = 1'b0;
-  assign blank_seconds = 1'b0;
+  assign blank_seconds = (pwm_out && mode_enable[0]);
+  assign blank_minutes = (pwm_out && mode_enable[1]);
+  assign blank_hours = (pwm_out && mode_enable[2]);
+
+  //---------------
+  // Mode Selection
+  //---------------
+
+  logic [2:0] mode_enable;
+
+  edit_mode_selector #(
+      .HOLD_CYCLES(CYCLES_PER_SECOND)
+  ) u_mode_selector (
+      .clk(clk),
+      .button(button[3]),
+      .mode_enable(mode_enable)
+  );
+
+  logic pwm_out;
+
+  pwm_generator #(
+      .PERIOD_CYCLES(CYCLES_PER_SECOND / 2),
+      .DUTY_CYCLES  (CYCLES_PER_SECOND / 10)
+  ) u_pwm_generator (
+      .clk(clk),
+      .rst(1'b0),
+      .pwm_out(pwm_out)
+  );
 
 endmodule

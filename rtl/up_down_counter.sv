@@ -12,7 +12,6 @@
 //                     - Decrement count when low.
 //      count          - Outputs value from 0 to MAX;
 
-
 `timescale 1ns / 1ps
 
 module up_down_counter #(

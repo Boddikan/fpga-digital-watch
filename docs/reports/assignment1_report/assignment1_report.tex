@@ -310,7 +310,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth, height=0.1\textheight]{user_top_watch_v1_waveform}
-		\caption{Measured waveform for decimal\_display\_driver.sv}
+		\caption{Measured waveform for user\_top\_watch\_v1.sv}
 	\end{figure}
 	
 	The waveform displays inputs \textbf{clk}, and outputs \textbf{seconds\_disp}, \textbf{minutes\_disp}, and \textbf{hours\_disp}. We observe that:
@@ -319,6 +319,24 @@
 		\item \textbf{seconds\_disp} increments every \textbf{seconds\_tick}.
 		\item \textbf{minutes\_disp} increments when \textbf{seconds\_disp} wraps and \textbf{seconds\_tick} asserts.
 		\item \textbf{hours\_disp} does not display increment however it does increment when \textbf{minutes\_disp} and \textbf{seconds\_disp} wraps and \textbf{seconds\_tick} asserts.
+	\end{itemize}
+	
+		\subsection{User Top Watch V2}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{user_top_watch_v2_waveform}
+		\caption{Measured waveform for user\_top\_watch\_v2.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, and \textbf{button} and outputs \textbf{blank\_seconds}, \textbf{blank\_minutes}, \textbf{blank\_hours}, and \textbf{seconds\_disp}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item \textbf{seconds\_disp} increments prior to long press of the button being registered.
+		\item Initial pulse for \textbf{blank\_seconds} then 2Hz pulse before next button press.
+		\item After next button press edit mode updated and \textbf{blank\_minutes} displays 2Hz pulse 
+		\item After next button press edit mode updated and \textbf{blank\_hours} displays 2Hz pulse.
+		\item After another button press we exit edit mode and \textbf{seconds\_disp} begins to increment again.
 	\end{itemize}
 	
 	\section{Report 3}
