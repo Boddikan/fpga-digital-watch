@@ -346,7 +346,7 @@
 	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
 	 \end{figure}
 	 
-	 This allows us to set the minimum address width for CounterWidth according to the size of CYCLE\_COUNT without the need to state the bit width explicitly. \$2clog(CYCLE\_COUNT) will calculate the smallest power of 2 that will cover memory required for CYCLE\_COUNT.
+	 This allows us to set the minimum address width for CounterWidth according to the size of CYCLE\_COUNT without the need to state the bit width explicitly. \$2clog(CYCLE\_COUNT) will calculate the smallest power of 2 that will cover the memory required for CYCLE\_COUNT.
 	 
 	 \section{Report 6}
 	 
@@ -367,7 +367,7 @@
 	 
 	 \begin{figure}[H]
 	 	\centering
-	 	\includegraphics[width=\linewidth, height=0.1\textheight]{q_report7}
+	 	\includegraphics[width=\linewidth, height=0.07\textheight]{q_report7}
 	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
 	 \end{figure}
 	 
@@ -387,7 +387,7 @@
 	 
 	 \begin{figure}[H]
 	 	\centering
-	 	\includegraphics[width=\linewidth, height=0.1\textheight]{q_report9}
+	 	\includegraphics[width=\linewidth, height=0.09\textheight]{q_report9}
 	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
 	 \end{figure}
 	 
@@ -439,10 +439,27 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=\linewidth, height=0.1\textheight]{q_report13}
+		\includegraphics[width=\linewidth, height=0.09\textheight]{q_report13}
 		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
 	\end{figure}
 	
 	We can use wire we are using combinational signals driven by continuous assignments and do not need to store a value.
+	
+	\section{Report 14}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.3\textheight]{q_report14_p1}
+		\includegraphics[width=\linewidth, height=0.12\textheight]{q_report14_p2}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	To thoroughly test our stop watch manually we would need to observe that each tick increments correctly which would take 24 hours at least. This is without factoring in the button presses which increases the testing time required and complexity of the testing exponentially with each input added to the system. Every new version would need to be tested the same amount of time at least, although likely longer.
+	\\
+	\\
+	\noindent Regression testing ensures that previous test cycles are not wasted and that we are safely building upon our already implemented code. Given that significant amounts of time may have already gone into testing previous versions we want to be able to pinpoint if any new additions break our existing code where possible
+	\\
+	\\
+	\noindent Setting the production values to 50,000,000 would make it difficult to verify within our testing environment and especially if we were manually test our design. These speeds exceed human perception making verification impossible depending on which module we test. Designing hardware with testability from the outset makes sure we can use values that are easier to follow and verify which can then be scaled during production
 		
 \end{document}
