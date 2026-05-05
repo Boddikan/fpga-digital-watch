@@ -321,7 +321,7 @@
 		\item \textbf{hours\_disp} does not display increment however it does increment when \textbf{minutes\_disp} and \textbf{seconds\_disp} wraps and \textbf{seconds\_tick} asserts.
 	\end{itemize}
 	
-		\subsection{User Top Watch V2}
+	\subsection{User Top Watch V2}
 	
 	\begin{figure}[H]
 		\centering
@@ -337,6 +337,23 @@
 		\item After next button press edit mode updated and \textbf{blank\_minutes} displays 2Hz pulse 
 		\item After next button press edit mode updated and \textbf{blank\_hours} displays 2Hz pulse.
 		\item After another button press we exit edit mode and \textbf{seconds\_disp} begins to increment again.
+	\end{itemize}
+	
+		\subsection{User Top Watch V3}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.15\textheight]{user_top_watch_v3_waveform}
+		\caption{Measured waveform for user\_top\_watch\_v3.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{button}, and outputs \textbf{blank\_seconds}, \textbf{blank\_minutes}, \textbf{blank\_hours}, \textbf{seconds\_disp}, \textbf{minutes\_disp}, and \textbf{hours\_disp}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When in the seconds edit mode \textbf{seconds\_disp} increments each button press (2) and then auto increments once held for the appropriate cycle amount.
+		\item \textbf{seconds\_disp} decrements when press (1) is asserted within edit mode.
+		\item Button press (8) then enters minutes edit mode which increments \textbf{minutes\_disp} on button press (2) and decrements on button press (1). 
+		\item Button press (8) then enters hours edit mode, again incrementing \textbf{hours\_disp} for each button press (2) or auto incrementing once held. 
 	\end{itemize}
 	
 	\section{Report 3}

@@ -1,5 +1,5 @@
 // Button Auto Repeat module produces one cycle pulse when button is pressed
-// and produces a pulse train afrer button has been held after a set amount of time.
+// and produces a pulse train after button has been held after a set amount of time.
 //
 // Ports:
 //      clk            - Clock signal.
