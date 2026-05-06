@@ -339,7 +339,7 @@
 		\item After another button press we exit edit mode and \textbf{seconds\_disp} begins to increment again.
 	\end{itemize}
 	
-		\subsection{User Top Watch V3}
+	\subsection{User Top Watch V3}
 	
 	\begin{figure}[H]
 		\centering
@@ -354,6 +354,20 @@
 		\item \textbf{seconds\_disp} decrements when press (1) is asserted within edit mode.
 		\item Button press (8) then enters minutes edit mode which increments \textbf{minutes\_disp} on button press (2) and decrements on button press (1). 
 		\item Button press (8) then enters hours edit mode, again incrementing \textbf{hours\_disp} for each button press (2) or auto incrementing once held. 
+	\end{itemize}
+	
+	\subsection{User Top Watch V4}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.15\textheight]{user_top_watch_v4_waveform}
+		\caption{Measured waveform for user\_top\_watch\_v4.sv}
+	\end{figure}
+	
+	The waveform displays inputs \textbf{clk}, \textbf{button}, and outputs \textbf{blank\_seconds}, \textbf{blank\_minutes}, \textbf{blank\_hours}, \textbf{seconds\_disp}. We observe that:
+	
+	\begin{itemize}[noitemsep]
+		\item When transitioning from seconds edit mode to minutes edit mode our \textbf{second\_tick} resets so that the next tick upon exiting edit mode starts a second later. This is shown when \textbf{second\_disp} increments to 3 after exiting edit mode.
 	\end{itemize}
 	
 	\section{Report 3}
