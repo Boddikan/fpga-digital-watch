@@ -5,6 +5,7 @@
 \usepackage[]{enumitem}
 \usepackage{float}
 \usepackage[]{titling}
+\usepackage{hyperref}
 
 \setlength{\droptitle}{-5em}
 
@@ -357,6 +358,7 @@
 	\end{itemize}
 	
 	\subsection{User Top Watch V4}
+	\label{subsec:watchv4}
 	
 	\begin{figure}[H]
 		\centering
@@ -398,6 +400,12 @@
 	 This allows us to set the minimum address width for CounterWidth according to the size of CYCLE\_COUNT without the need to state the bit width explicitly. \$2clog(CYCLE\_COUNT) will calculate the smallest power of 2 that will cover the memory required for CYCLE\_COUNT.
 	 
 	 \section{Report 6}
+	 
+	  \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=\linewidth]{q_report6}
+	 	\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	 \end{figure}
 	 
 	 \begin{figure}[H]
 	 	\centering
@@ -488,11 +496,11 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=\linewidth, height=0.09\textheight]{q_report13}
+		\includegraphics[width=\linewidth, height=0.08\textheight]{q_report13}
 		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
 	\end{figure}
 	
-	We can use wire we are using combinational signals driven by continuous assignments and do not need to store a value.
+	We can use wire since we are using combinational signals driven by continuous assignments and do not need to store a value.
 	
 	\section{Report 14}
 	
@@ -510,5 +518,47 @@
 	\\
 	\\
 	\noindent Setting the production values to 50,000,000 would make it difficult to verify within our testing environment and especially if we were manually test our design. These speeds exceed human perception making verification impossible depending on which module we test. Designing hardware with testability from the outset makes sure we can use values that are easier to follow and verify which can then be scaled during production
+	
+	\section{Report 15}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.12\textheight]{q_report15}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	See \autoref{subsec:watchv4}.
+	
+	\section{Report 16}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.09\textheight]{q_report16}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	This will cause multiple resets as the button is not using a rising edge detector, so we may register a brief press for multiple rising clock edges. This will not cause issues as the \textbf{run} will assert high when transitioning to the next \textbf{edit\_mode}.
+	
+	\section{Report 17}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.14\textheight]{q_report17}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	Most designs did not work correctly the first time implemented on the board or there produced unintended display issues. \\
+	\\
+	\noindent I prefer working in the simulation environment. It is less time consuming and the asserts give feedback as to the exact issues with our module which improves debugging. Although you miss the physical feedback of the FPGA, it is satisfying to run your code directly and have this work after verification which saves a lot of compilation time compared to Quartus.
+	
+	\section{Report 18}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth, height=0.1\textheight]{q_report18}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_1.pdf}
+	\end{figure}
+	
+	Assuming 50MHz clock we will have between 50,002,500Hz and 49997500Hz drift. Assuming maximum drift for a 24-hour period we will get 1.00005 x 86,400 seconds = 86,404.32. So we will get approximately 4.32 seconds of drift every 24 hours.
 		
 \end{document}
