@@ -6,6 +6,8 @@
 \usepackage{float}
 \usepackage[]{titling}
 \usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows, calc}
 
 \setlength{\droptitle}{-5em}
 
@@ -100,6 +102,80 @@
 		\caption{Block diagram created using diagram.io}
 	\end{figure}
 	
+	\section{Report 8}
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report8}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure} 
 	
+	Using the \textbf{restartable\_rate\_generator} we generate a tick after one centisecond. This is then used alongside our enable signal to drive the \textbf{cascade\_counter} module input.
+	
+	\section{Report 8}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report9}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure} 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth, height=0.4\textheight]{snapshot_mux_hardware}
+		\caption{Created at tikzmaker.com}
+	\end{figure} 
+	
+	\section{Report 10}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report10}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	\tikzset{
+		->,  % makes the edges directed
+		>=stealth, % makes the arrow heads bold
+		shorten >=2pt, shorten <=2pt, % shorten the arrow
+		node distance=3cm, % specifies the minimum distance between two nodes. Change if n
+		every state/.style={draw=blue!55,very thick,fill=blue!20}, % sets the properties for each ’state’ n
+		initial text=$ $, % sets the text that appears on the start arrow
+	}
+	
+	\begin{tikzpicture}
+			\node[state with output, initial] (s0) {$r/live$ \nodepart{lower} $0$};
+			\node[state with output, right of=s0] (s1) {$r/frz$ \nodepart{lower} $0$};
+			\node[state with output, right of=s1] (s2) {$s/frz$ \nodepart{lower} $0$};
+			\node[state with output, right of=s2] (s3) {$s/live$ \nodepart{lower} $0$};
+			\node[state with output, right of=s3] (s4) {$s/live\_rst$ \nodepart{lower} $0$};
+			
+			\draw (s0) edge[bend left = 50] node[above]{$1,0$} (s3)
+			(s0) edge[bend left] node[above]{$0,1$} (s1)
+			%
+			(s1) edge[bend left] node[above]{$1,0$} (s2)
+			(s1) edge[bend left] node[above]{$0,1$} (s0)
+			%
+			(s2) edge[bend left] node[above]{$0,1$} (s3)
+			(s2) edge[bend left=40] node[above]{$1,0$} (s1)
+			%
+			(s3) edge[bend left=50] node[above]{$1,0$} (s0)
+			(s3) edge[bend left] node[above]{$0,1$} (s4)
+			%
+			(s4) edge[bend left = 50] node[above]{$0,0$} (s3)
+			%(s4) edge[bend left=60] node[above]{$1$} (s0)
+			%
+			;
+	\end{tikzpicture}	
+	
+	\section{Report 10}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report11}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	The borrow output is used to cascade the up and down counting functions. The borrow output produces a pulse equal in width to the count down input when the counter underflows. This allows the counter to be easily cascaded by feeding the borrow ouput into the count down or up inputs. \\
+	\\
+	\noindent In the schematic diagram the BORROW OUTPUT comes from a 5 input NAND gate. Its first input is connected to an inverted input DOWN COUNT, and inverted outputs from Q\textsubscript{A}, Q\textsubscript{B}, Q\textsubscript{C}, and Q\textsubscript{D}. This means borrow out remains high until all inputs and COUNT DOWN are low for half negedge clock cycle.
+
 \end{document}
