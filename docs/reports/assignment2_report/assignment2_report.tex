@@ -167,7 +167,7 @@
 			;
 	\end{tikzpicture}	
 	
-	\section{Report 10}
+	\section{Report 11}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{q_report11}
@@ -177,5 +177,23 @@
 	The borrow output is used to cascade the up and down counting functions. The borrow output produces a pulse equal in width to the count down input when the counter underflows. This allows the counter to be easily cascaded by feeding the borrow ouput into the count down or up inputs. \\
 	\\
 	\noindent In the schematic diagram the BORROW OUTPUT comes from a 5 input NAND gate. Its first input is connected to an inverted input DOWN COUNT, and inverted outputs from Q\textsubscript{A}, Q\textsubscript{B}, Q\textsubscript{C}, and Q\textsubscript{D}. This means borrow out remains high until all inputs and COUNT DOWN are low for half negedge clock cycle.
+	
+	\section{Report 12}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report12}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	The first feature implemented was the set mode feature. This felt the most natural and served as a basis with which to test the countdown timer features once are able to set the timer. After this was implemented Stopped Mode 
+	
+	\section{Report 13}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report13}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	I used a simply FSM to with to determine if the counter is running. Using a combinational block we determine whether to toggle the state between running or not running and provide a guard to prevent the state from entering into running if in edit mode or if the count is not above zero.
 
 \end{document}

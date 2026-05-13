@@ -1,3 +1,15 @@
+// Editable Countdown wraps counter from 0 to MAX.
+// In edit mode count increments up when inc is asserted and down when dec is asserted.
+// Outputs pulse for borrow_out wrapping.
+//
+// Ports:
+//      clk            - Clock signal.
+//      tick           - Tick that increments when edit mode is low.
+//      edit_mode      - Determines if we are in edit mode.
+//      inc            - Determines if we inc during edit mode.
+//      dec            - Determines if we dec during edit mode.
+//      count          - Register that hold count.
+
 `timescale 1ns / 1ps
 
 module editable_countdown #(
