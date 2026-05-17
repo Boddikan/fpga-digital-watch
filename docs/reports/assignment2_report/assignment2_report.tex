@@ -195,5 +195,36 @@
 	\end{figure}
 	
 	I used a simply FSM to with to determine if the counter is running. Using a combinational block we determine whether to toggle the state between running or not running and provide a guard to prevent the state from entering into running if in edit mode or if the count is not above zero.
+	
+	\section{Report 14}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report14}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	Overall this project presented a great learning experience and felt like working in a professional environment. The project ran fairly smoothly for me in terms of setting up the project and using the tests to ensure each module was working correctly. Certain modules I found difficult to implement even with the guidance the assignment. I think I would take a little more time to plan each module and understand each step exactly prior to implementation, and attempt to understand the validation test more thoroughly to assist with debugging. 
+	
+	\section{Report 15}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report15}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	Given Quartus's compilation times alone I would estimate several hours have been saved, let alone the formal verification tools effectiveness in debugging the code. The time spent learning these new tools was paid back ten-fold. Without these tools some of the bugs may have caught using testbenches however as the project grew and without formal verification tools, it would have become increasingly difficult to track down where the problems were and which module was causing them.
+	
+	\section{Report 16}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report16}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{elaborated}
+		\caption{elaborated.png generated for mod\_n\_counter.sv using Yosys}
+	\end{figure}
 
 \end{document}
