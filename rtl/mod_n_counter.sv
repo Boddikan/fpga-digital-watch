@@ -28,9 +28,6 @@ module mod_n_counter #(
     else if (enable) count <= next_count;
   end
 
-  always_comb begin
-    if (count == MaxCount) next_count = '0;
-    else next_count = count + WIDTH'(1);
-  end
+  assign next_count = (count < MaxCount) ? count + 1'b1 : '0;
 
 endmodule

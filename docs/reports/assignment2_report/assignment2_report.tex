@@ -112,7 +112,7 @@
 	
 	Using the \textbf{restartable\_rate\_generator} we generate a tick after one centisecond. This is then used alongside our enable signal to drive the \textbf{cascade\_counter} module input.
 	
-	\section{Report 8}
+	\section{Report 9}
 	
 	\begin{figure}[H]
 		\centering
@@ -122,7 +122,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth, height=0.4\textheight]{snapshot_mux_hardware}
+		\includegraphics[]{snapshot_mux_hardware}
 		\caption{Created at tikzmaker.com}
 	\end{figure} 
 	
@@ -142,30 +142,28 @@
 		initial text=$ $, % sets the text that appears on the start arrow
 	}
 	
+	\begin{center}
 	\begin{tikzpicture}
-			\node[state with output, initial] (s0) {$r/live$ \nodepart{lower} $0$};
-			\node[state with output, right of=s0] (s1) {$r/frz$ \nodepart{lower} $0$};
-			\node[state with output, right of=s1] (s2) {$s/frz$ \nodepart{lower} $0$};
-			\node[state with output, right of=s2] (s3) {$s/live$ \nodepart{lower} $0$};
-			\node[state with output, right of=s3] (s4) {$s/live\_rst$ \nodepart{lower} $0$};
+			\node[state without output, initial] (s0) {\shortstack{$stopped$\\$live$}};
+			\node[state without output, right of=s0] (s1)  {\shortstack{$running$\\$live$}};
+			\node[state without output, right of=s1] (s2)  {\shortstack{$stopped$\\$frozen$}};
+			\node[state without output, right of=s2] (s3)  {\shortstack{$running$\\$frozen$}};
 			
-			\draw (s0) edge[bend left = 50] node[above]{$1,0$} (s3)
-			(s0) edge[bend left] node[above]{$0,1$} (s1)
+			\draw 
+			(s0) edge[loop above] node[above]{$btn[1]/rst$} (s2)
+			(s0) edge[bend left] node[above]{$btn[0]$} (s1)
 			%
-			(s1) edge[bend left] node[above]{$1,0$} (s2)
-			(s1) edge[bend left] node[above]{$0,1$} (s0)
+			(s1) edge[bend left=60] node[above]{$btn[1]/freeze$} (s3)
+			(s1) edge[bend left] node[above]{$btn[0]$} (s0)
 			%
-			(s2) edge[bend left] node[above]{$0,1$} (s3)
-			(s2) edge[bend left=40] node[above]{$1,0$} (s1)
+			(s2) edge[bend left] node[above]{$btn[0]$} (s3)
+			(s2) edge[bend left=50] node[below]{$btn[1]/unfreeze$} (s0)
 			%
-			(s3) edge[bend left=50] node[above]{$1,0$} (s0)
-			(s3) edge[bend left] node[above]{$0,1$} (s4)
-			%
-			(s4) edge[bend left = 50] node[above]{$0,0$} (s3)
-			%(s4) edge[bend left=60] node[above]{$1$} (s0)
-			%
+			(s3) edge[bend left] node[above]{$btn[0]$} (s2)
+			(s3) edge[bend left=50] node[below]{$btn[1]/unfreeze$} (s1)
 			;
 	\end{tikzpicture}	
+	\end{center}
 	
 	\section{Report 11}
 	\begin{figure}[H]
@@ -225,6 +223,92 @@
 		\centering
 		\includegraphics[width=\linewidth]{elaborated}
 		\caption{elaborated.png generated for mod\_n\_counter.sv using Yosys}
+	\end{figure}
+	
+	\$add works by adding 1'b1 to the count value and \$lt is a comparison operator which checks to see if count is less than MaxCount (2'11). These are fed in to \$mux where A is '0 and B is count + 1'b1. The output of \$lt is then used as the select signal to determine the output of the \$mux. These work together to drive our next state logic.
+	
+	\section{Report 17}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report17}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{proc}
+		\caption{proc.png generated for mod\_n\_counter.sv using Yosys}
+	\end{figure}
+	
+	\$sdffe stands for synchronous d flip-flop enable. CLK is the clock input and represents the (posedge clk) in the always\_ff block. D is the data input, in this case next\_count. EN is the enable input or else if (enable) and SRST is the synchronous reset input or if (rst) section of our always\_ff block. It appears that initially more complicated circuit designs are encapsulated and abstracted under PROC. It then appears that opt finds the simplest components to use when implementing our circuit design.
+	
+	\section{Report 18}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report18}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{techmap}
+		\caption{techmap.png generated for mod\_n\_counter.sv using Yosys}
+	\end{figure}
+	
+	There are two flip flop instances as module instantiated a two-bit register this is then converted to a hardware primitive to become two-separate one bit flip-flops.\\
+	\\
+	\noindent Yosys slices the wires this way as it needs to map any multibit signals to single bit output destination. Since this is representative of hardware primitive gates will require a single bit for its inputs. \\
+	\\
+	\noindent PP0P represents a positive edge flip flop with a positive polarity enable and reset, with reset to zero.
+	
+	\section{Report 19}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report19}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{abc}
+		\caption{abc.png generated for mod\_n\_counter.sv using Yosys}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics{circuit_diagram}
+		\caption{circuit\_digram.png created at circuit2tikz.tf.fau.de/designer/}
+	\end{figure}
+	
+	
+	\begin{figure} [H]
+		\begin{center}
+			\begin{tabular}{c | c c | c c}
+				& count[1] & count[0] & flip\_flop[1] & flip\_flop[0] \\
+				\hline
+				& 0 & 0 & 0 & 1 \\
+				& 0 & 1 & 1 & 0 \\
+				& 1 & 0 & 1 & 1 \\
+				& 1 & 1 & 0 & 0 \\
+			\end{tabular}
+		\end{center}
+		\caption{Truth table for circuit\_diagram.png}
+	\end{figure}
+	
+	The above truth table shows that our flip\_flops store the values given by next\_count which correctly shows out count incrementing and wrapping for a mod\_n\_counter.
+	
+	\section{Report 20}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report20}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
+	\end{figure}
+	
+	\section{Report 21}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{q_report21}
+		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
 	\end{figure}
 
 \end{document}
