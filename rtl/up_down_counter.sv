@@ -35,13 +35,13 @@ module up_down_counter #(
       if (count == Max) begin
         next_count = '0;
       end else begin
-        next_count = count + 1;
+        next_count = count + 1'b1;
       end
     end else begin
-      if (count == 0) begin
+      if (count == '0) begin
         next_count = Max;
       end else begin
-        next_count = count - 1;
+        next_count = count - 1'b1;
       end
     end
   end

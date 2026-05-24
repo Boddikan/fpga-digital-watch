@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  23 MAY 2026 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  24 MAY 2026 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,13 +890,22 @@ Package pdftex.def Info: ./images/q_report20.png  used on input line 303.
 (pdftex.def)             Requested size: 483.69687pt x 74.77087pt.
  [10 <./images/q_report19.png> <./images/abc.png> <./images/circuit_diagram.png
 >]
+Underfull \hbox (badness 10000) in paragraph at lines 307--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--312
+
+ []
+
 <./images/q_report21.png, id=231, 423.5825pt x 94.85437pt>
 File: ./images/q_report21.png Graphic file (type png)
 <use ./images/q_report21.png>
-Package pdftex.def Info: ./images/q_report21.png  used on input line 310.
+Package pdftex.def Info: ./images/q_report21.png  used on input line 316.
 (pdftex.def)             Requested size: 483.69687pt x 108.32034pt.
- [11 <./images/q_report20.png> <./images/q_report21.png>] (assignment2_report.a
-ux)
+[11 <./images/q_report20.png> <./images/q_report21.png>]
+(assignment2_report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -906,12 +915,12 @@ Package rerunfilecheck Info: File `assignment2_report.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  21600 strings out of 467871
- 426717 string characters out of 5418376
+ 426603 string characters out of 5418376
  814041 words of memory out of 5000000
  50098 multiletter control sequences out of 15000+600000
  632004 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,104p,589b,858s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,104p,746b,858s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\liamw\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/liamw/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -921,7 +930,7 @@ X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/liamw/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/liamw/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/liamw/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on assignment2_report.pdf (11 pages, 1206259 bytes).
+Output written on assignment2_report.pdf (11 pages, 1207820 bytes).
 PDF statistics:
  290 PDF objects out of 1000 (max. 8388607)
  65 named destinations out of 1000 (max. 500000)

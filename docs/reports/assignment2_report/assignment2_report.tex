@@ -20,7 +20,7 @@
 	\maketitle
 	
 	\section{Introduction}
-	This report details answers to key questions posed throughout the Digital Systems Project Assignment and analyses all waveforms given by each module using a Testbench. We aim to highlight key findings and confirm all output behaves as expected after testing.\\
+	This report details answers to key questions posed throughout the Digital Systems Project Assignment and analyses some waveforms but has a stronger focus on formal verification. We aim to highlight key findings and confirm all output behaves as expected after testing.\\
 	
 	\section{Report 1}
 	\begin{figure}[H]
@@ -304,11 +304,19 @@
 		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
 	\end{figure}
 	
+	The extra feature I have added is a step sequencer which outputs audio to the line out. My undergraduate degree was a Bachelor of Music so I was interested in implementing something audio based on the DE1-SoC. Transparently, AI was used to help build most of features for the sequencer, as the sequencer alone may have taken as long as the original project itself. As such, my main focus was understanding the basics of getting audio to work on the FPGA, basic signal processing components for tone generation and implementing the overall design choices for the sequencer. AI was used to assist with overall development and more time consuming work (e.g developing the look up tables for scales). \\
+	\\
+	\noindent The sequencer runs when SW[1:0] = 2'b10 and has two modes. The sequencer mode assigns KEY0 to stop/start the sequence, KEY1 reverses the playback direction, KEY2 increases the tempo of the sequence, and holding KEY3 for 0.5 seconds transitions to tone generation mode. Notes are activated when any of SW[9:2] are high. Dimming is disabled during this mode since SW[9:8] are used for the sequencer.\\
+	\\
+	\noindent In tone generation mode, KEY0 lowers the sequence an octave, KEY1 raises the notes an octave, KEY2 changes cycles the pulse width of the square wave which alters the tone, and pushing KEY3 changes the notes of the scale with 4 scales to select from in total.
+	
 	\section{Report 21}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{q_report21}
 		\caption{Screenshot taken from Digital\_Watch\_Part\_2.pdf}
 	\end{figure}
+	
+	Time keeping in general seems to be best suited using an FPGA, as the clock allows us to keep track of real-time using the appropriate counter modules. Tick generators, debouncing, and parallel outputs also work well with the FPGA. User interface management like entering edit mode tended to be clunky when implementing it the FPGA, so this aspect may be better suited to software.
 
 \end{document}
